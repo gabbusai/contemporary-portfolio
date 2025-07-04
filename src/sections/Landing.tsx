@@ -17,7 +17,7 @@ function Landing() {
   const isMobile = useMediaQuery({ maxWidth: 768 })
   // Responsive transforms
   const cellSize = useTransform(scrollYProgress, [0, 1], isMobile ? [80, 20] : [130, 20])
-  const fontSize = useTransform(scrollYProgress, [0, 1], isMobile ? ['2.5rem', '4.5rem'] : ['5rem', '9rem'])
+  const fontSize = useTransform(scrollYProgress, [0, 1], isMobile ? ['2.5rem', '4.5rem'] : ['6rem', '11rem'])
   const fontOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0.0])
   const componentSize = useTransform(scrollYProgress, [0, 1], ['100%', isMobile ? '90%' : '80%'])
   const backgroundSize = useMotionTemplate`${cellSize}px ${cellSize}px`
@@ -25,13 +25,13 @@ function Landing() {
 
   return (
     <motion.div className='w-screen h-screen relative bg-zinc-950 rounded-3xl overflow-hidden border-dashed border-4 border-white 
-    pt-[100px]'
+    pt-16'
     ref={divRef}
     style={{   }}>
       <GridBg backgroundSize={backgroundSize} />
       {/* The content of the landing page */}
       <div className='relative z-10 h-full  justify-center'>
-        <motion.h1 className='mt-[15%] lg:bg-white text-white text-center lg:text-black font-bold font-ibm uppercase
+        <motion.h1 className='mt-[10%] lg:bg-white text-white text-center lg:text-black font-bold font-ibm uppercase
         absolute top-0 left-0 w-screen z-9 tracking-[-0.1em] overflow-x-clip'
         style={{ fontSize,
           opacity: fontOpacity,
