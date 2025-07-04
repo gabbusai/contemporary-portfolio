@@ -40,7 +40,7 @@ function SphereScene() {
         rotation={[5, 0, 0]}
         scale={2.4}
       >
-        <Outlines thickness={1} color="white" />
+        <Outlines thickness={2} color="white" />
       </mesh>
     </group>
   )

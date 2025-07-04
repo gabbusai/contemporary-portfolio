@@ -1,22 +1,38 @@
 import React from 'react'
 import GridBg from './components/GridBg'
 import Landing from './sections/Landing'
-import { Canvas } from '@react-three/fiber'
-import SphereScene from './components/SphereScene'
+import { motion, useMotionTemplate, useScroll, useTransform } from 'motion/react'
+import NavBar from './components/NavBar'
+import { TABS } from './dummyData'
 
 function App() {
-  return (
-    <div className="w-screen bg-black relative">
 
-      <div className="relative h-[200vh]">
-        <div className="top-0 sticky w-screen h-screen grid place-items-center">
+
+  const section01Ref = React.useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: section01Ref,
+    offset: ['start start', 'end end'],
+  })
+  const sectionOpacity = useTransform(scrollYProgress, [0.8, 1], [1, 0.0])
+  return (
+    <div className="w-screen bg-white relative">
+
+      <motion.div className=" 
+          sticky z-20 top-0">
+            <NavBar tabs={TABS}/>
+        </motion.div>
+
+      <motion.div className="pt-[100px]relative h-[300vh] bg-white" ref={section01Ref}
+      style={{ opacity: sectionOpacity }}>
+        <motion.div className="top-0 sticky w-screen h-screen grid place-items-center"
+          >
             <Landing />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       
-      <div className="h-screen w-screen bg-blue-500">
-        
+      <div className="h-screen w-screen bg-white">
+        <h1>Hello World</h1>
       </div>
     </div>
   )
