@@ -13,7 +13,7 @@ function AboutMe() {
       </div>
     </div>
 
-    <div className="h-[300vh] relative  ">
+    <div className="h-[300vh] relative">
       <div className="top-0 sticky w-screen h-screen grid place-items-center">
         <ProfileCard />
       </div>

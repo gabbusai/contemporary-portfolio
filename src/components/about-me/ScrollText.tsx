@@ -13,7 +13,7 @@ function ScrollText({ text }: ScrollTextProps) {
   })
 
   // Map scroll progress to number of visible characters
-  const visibleCharCount = useTransform(scrollYProgress, [0.1, 0.5, 0.7], [0, text.length, 0])
+  const visibleCharCount = useTransform(scrollYProgress, [0.1, 0.5, 0.6], [0, text.length,0])
 
   return (
     <div ref={containerRef} className="relative w-full h-full flex items-center justify-center">
