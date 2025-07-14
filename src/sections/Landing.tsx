@@ -33,7 +33,7 @@ function Landing() {
       {/* The content of the landing page */}
       <div className='relative z-10 h-full  justify-center'>
         <motion.h1
-          className='mt-[10%] lg:bg-white text-white text-center lg:text-black font-bold font-ibm uppercase
+          className='mt-[10%] lg:bg-white text-white text-center lg:text-black font-bold font-special uppercase
             absolute top-0 left-0 w-screen z-9 tracking-[-0.1em] overflow-x-clip '
           style={{
             fontSize,
