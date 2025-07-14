@@ -4,9 +4,8 @@ import Landing from './sections/Landing'
 import { motion, useMotionTemplate, useScroll, useTransform } from 'motion/react'
 import NavBar from './components/NavBar'
 import { TABS } from './dummyData'
-import { EffectComposer, Noise, Scanline } from '@react-three/postprocessing'
-import { Canvas } from '@react-three/fiber'
-import { Stars } from '@react-three/drei'
+import AboutMe from './sections/AboutMe'
+import ScrollText from './components/about-me/ScrollText'
 
 function App() {
 
@@ -33,10 +32,12 @@ function App() {
         </motion.div>
       </motion.div>
 
-      
-      <div className="h-screen w-screen bg-white">
-        <h1>Hello World</h1>
-      </div>
+
+
+      <AboutMe />
+
+
+      <div className="bg-black h-screen"></div>
       
     </div>
   )

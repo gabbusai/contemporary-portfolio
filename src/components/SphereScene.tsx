@@ -37,7 +37,7 @@ function SphereScene() {
         geometry={nodes.Object_2.geometry}
         material={materials.None}
         position={[0, -2, 0]} // Make sure the mesh is centered
-        rotation={[5, 0, 0]}
+        rotation={[4.5, 0, 0]}
         scale={2.4}
       >
         <Outlines thickness={2} color="white" />

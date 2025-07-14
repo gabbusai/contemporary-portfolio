@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import SphereScene from '../components/SphereScene';
 import { useMediaQuery } from 'react-responsive';
+import TypewriterComponent from 'typewriter-effect';
 
 function Landing() {
   const { scrollYProgress } = useScroll(
@@ -31,14 +32,25 @@ function Landing() {
       <GridBg backgroundSize={backgroundSize} />
       {/* The content of the landing page */}
       <div className='relative z-10 h-full  justify-center'>
-        <motion.h1 className='mt-[10%] lg:bg-white text-white text-center lg:text-black font-bold font-ibm uppercase
-        absolute top-0 left-0 w-screen z-9 tracking-[-0.1em] overflow-x-clip'
-        style={{ fontSize,
-          opacity: fontOpacity,
-          letterSpacing,
-         }}>
-          HELLO, I'M JOHN GABRIEL
+        <motion.h1
+          className='mt-[10%] lg:bg-white text-white text-center lg:text-black font-bold font-ibm uppercase
+            absolute top-0 left-0 w-screen z-9 tracking-[-0.1em] overflow-x-clip '
+          style={{
+            fontSize,
+            opacity: fontOpacity,
+            letterSpacing,
+            textShadow: '-10px 10px 0px rgba(0,0,0,0.5)', // ← Big angled shadow
+          }}
+        >
+          <TypewriterComponent
+            options={{
+              strings: ['Hello!', 'I am John Gabriel!', 'A Full Stack Developer', 'Welcome', 'To my Portfolio'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </motion.h1>
+
         <div className="h-full z-11">
           <Canvas className='w-full z-11'>
             <SphereScene />
