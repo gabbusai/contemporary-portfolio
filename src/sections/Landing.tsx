@@ -20,7 +20,7 @@ function Landing() {
   const cellSize = useTransform(scrollYProgress, [0, 1], isMobile ? [80, 20] : [130, 20])
   const fontSize = useTransform(scrollYProgress, [0, 1], isMobile ? ['2.5rem', '4.5rem'] : ['6rem', '11rem'])
   const fontOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0.0])
-  const componentSize = useTransform(scrollYProgress, [0, 1], ['100%', isMobile ? '90%' : '80%'])
+  //const componentSize = useTransform(scrollYProgress, [0, 1], ['100%', isMobile ? '90%' : '80%'])
   const backgroundSize = useMotionTemplate`${cellSize}px ${cellSize}px`
   const letterSpacing = useTransform(scrollYProgress, [0, 1], isMobile ? ['0.1em', '-0.2em'] : ['0.2em', '-0.5em'])
 

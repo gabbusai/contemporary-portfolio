@@ -13,7 +13,7 @@ function SphereScene() {
 
   const { scrollYProgress } = useScroll()
 
-  const rotateY = useTransform(scrollYProgress, [0, 1], [0, Math.PI * 2])
+  const rotateY = useTransform(scrollYProgress, [0, 1], [0, Math.PI * 4])
   const scaleValue = useTransform(scrollYProgress, [0, 1], [1.65,3])
 
   const springRotate = useSpring(rotateY, { stiffness: 50, damping: 20 })

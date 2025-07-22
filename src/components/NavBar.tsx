@@ -57,7 +57,7 @@ function NavBar({tabs}: NavBarProps) {
                         }}
                         />
                     )}
-                    <span className='z-10 relative font-dmSans sm:text-[16px] md:text-[24px] mix-blend-exclusion'
+                    <span className='z-10 relative font-dmSans uppercase sm:text-[12px] md:text-[22px] mix-blend-exclusion font-ibm'
                     >
                         {tab.title}
                     </span>
